@@ -22,12 +22,15 @@ public class Day01Test {
 	public void testPart1() {
 		// when
 		final var result = Day01.part1(testInput);
-
 		// then
 		assertEquals(24000, result);
 
 		// get solution
-		System.out.println("Result of aoc2022.Day 01 - Part 1: " + Day01.part1(input));
+		long init = System.currentTimeMillis();
+		final var solution = Day01.part1(input);
+		long end = System.currentTimeMillis() - init;
+		System.out.printf("Part 1 took %d ms%n", end);
+		System.out.println("Result of aoc2022.Day 01 - Part 1: " + solution);
 	}
 
 	@Test
@@ -39,6 +42,10 @@ public class Day01Test {
 		assertEquals(45000, result);
 
 		// get solution
-		System.out.println("Result of aoc2022.Day 01 - Part 2: " + Day01.part2(input));
+		long init = System.currentTimeMillis();
+		final var solution = Day01.part2(input);
+		long end = System.currentTimeMillis() - init;
+		System.out.printf("Part 2 took %d ms%n", end);
+		System.out.println("Result of aoc2022.Day 01 - Part 2: " + solution);
 	}
 }
