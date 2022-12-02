@@ -20,6 +20,12 @@ new_day: ## create new day with day parameter
 	@touch src/main/resources/aoc2022/Day${day}.txt
 	@touch src/main/resources/aoc2022/Day${day}_test.txt
 
+remove_day: ## remove day classes with day parameter
+	@rm src/main/java/aoc2022/Day${day}.java
+	@rm src/test/java/aoc2022/Day${day}Test.java
+	@rm src/main/resources/aoc2022/Day${day}.txt
+	@rm src/main/resources/aoc2022/Day${day}_test.txt
+
 format: ## format code
 	@./mvnw prettier:write
 

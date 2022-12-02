@@ -15,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 )
 public class DayXXTest {
 
-    private final List<String> testInput = InputReader.readInputAsStrings("Day01_test");
-    private final List<String> input = InputReader.readInputAsStrings("Day01");
+    private final List<String> testInput = InputReader.readInputAsStrings("aoc2022/Day01_test");
+    private final List<String> input = InputReader.readInputAsStrings("aoc2022/Day01");
 
     public DayXXTest() throws IOException {
         // default constructor
@@ -31,7 +31,7 @@ public class DayXXTest {
         assertEquals(0, result);
 
         // get solution
-        System.out.println("Result of aoc2022.Day XX - Part 1: " + DayXX.part1(input));
+        System.out.println("Result of aoc2022.Day 01 - Part 1: " + DayXX.part1(input));
     }
 
     @Test
