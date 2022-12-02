@@ -15,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 )
 public class DayXXTest {
 
-    private final List<String> testInput = InputReader.readInputAsStrings("aoc2022/Day01_test");
-    private final List<String> input = InputReader.readInputAsStrings("aoc2022/Day01");
+    private final List<String> testInput = InputReader.readInputAsStrings("aoc2022/DayXX_test");
+    private final List<String> input = InputReader.readInputAsStrings("aoc2022/DayXX");
 
     public DayXXTest() throws IOException {
         // default constructor
@@ -31,7 +31,11 @@ public class DayXXTest {
         assertEquals(0, result);
 
         // get solution
-        System.out.println("Result of aoc2022.Day 01 - Part 1: " + DayXX.part1(input));
+        long init = System.currentTimeMillis();
+        final var solution = Day01.part1(input);
+        long end = System.currentTimeMillis() - init;
+        System.out.printf("Part 1 took %d ms%n", end);
+        System.out.println("Result of aoc2022.DayXX - Part 1: " + solution);
     }
 
     @Test
@@ -43,6 +47,10 @@ public class DayXXTest {
         assertEquals(0, result);
 
         // get solution
-        System.out.println("Result of aoc2022.Day 01 - Part 2: " + DayXX.part2(input));
+        long init = System.currentTimeMillis();
+        final var solution = Day01.part2(input);
+        long end = System.currentTimeMillis() - init;
+        System.out.printf("Part 2 took %d ms%n", end);
+        System.out.println("Result of aoc2022.DayXX - Part 2: " + solution);
     }
 }
