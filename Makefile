@@ -20,4 +20,10 @@ new_day: ## create new day with day parameter
 	@touch src/main/resources/aoc2022/Day${day}.txt
 	@touch src/main/resources/aoc2022/Day${day}_test.txt
 
+format: ## format code
+	@./mvnw prettier:write
+
+check-format: ## check format code
+	@./mvnw prettier:check
+
 .PHONY: help start install-deps clean new_day
