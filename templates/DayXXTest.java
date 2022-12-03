@@ -32,7 +32,7 @@ public class DayXXTest {
 
         // get solution
         long init = System.currentTimeMillis();
-        final var solution = Day01.part1(input);
+        final var solution = DayXX.part1(input);
         long end = System.currentTimeMillis() - init;
         System.out.printf("Part 1 took %d ms%n", end);
         System.out.println("Result of aoc2022.DayXX - Part 1: " + solution);
@@ -48,7 +48,7 @@ public class DayXXTest {
 
         // get solution
         long init = System.currentTimeMillis();
-        final var solution = Day01.part2(input);
+        final var solution = DayXX.part2(input);
         long end = System.currentTimeMillis() - init;
         System.out.printf("Part 2 took %d ms%n", end);
         System.out.println("Result of aoc2022.DayXX - Part 2: " + solution);
