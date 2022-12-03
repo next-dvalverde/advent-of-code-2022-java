@@ -1,3 +1,7 @@
 #!/bin/sh
 
 make check-format
+if [[ $? -ne 0 ]]; then
+   exit 1
+fi
+make all_tests
