@@ -26,6 +26,12 @@ remove_day: ## remove day classes with day parameter
 	@rm src/main/resources/aoc2022/Day${day}.txt
 	@rm src/main/resources/aoc2022/Day${day}_test.txt
 
+all_tests: ## execute all tests
+	@./mvnw test
+
+test: ## execute test by parameter
+	@./mvnw test -Dtest=Day${day}Test
+
 format: ## format code
 	@./mvnw prettier:write
 
