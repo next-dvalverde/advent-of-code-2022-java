@@ -19,7 +19,7 @@ jobs:
           cache: maven
 
       - name: ✅ Check Format
-        run: make check-format-pipeline
+        run: make check_format_pipeline
 
       - name: 🔧 Execute tests
-        run: make all-tests-pipeline
+        run: make all_tests_pipeline

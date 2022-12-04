@@ -2,11 +2,10 @@
 help: ## show make targets
 	@awk 'BEGIN {FS = ":.*?## "} /[a-zA-Z_-]+:.*?## / {sub("\\\\n",sprintf("\n%22c"," "), $$2);printf " \033[36m%-20s\033[0m  %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-start: install-deps ## add gitHooks and install dependencies
-	@if [ ! -f $(current-dir).env ]; then touch .env && echo "Created .env PLEASE, FILL WITH AOC_SESSION=<SESSION>"; fi
+start: install_deps ## add gitHooks and install dependencies
 	@git config core.hooksPath .githooks
 
-install-deps: ## install deps
+install_deps: ## install deps
 	@./mvnw install
 
 clean: ## maven clean
@@ -35,13 +34,13 @@ test: ## execute test by parameter
 format: ## format code
 	@./mvnw prettier:write
 
-check-format: ## check format code
+check_format: ## check format code
 	@./mvnw prettier:check
 
-all-tests-pipeline: ## execute all tests
+all_tests_pipeline: ## execute all tests for pipeline
 	@mvn test
 
-check-format-pipeline: ## check format code
+check_format_pipeline: ## check format code for pipeline
 	@mvn prettier:check
 
-.PHONY: help start install-deps clean new_day
+.PHONY: help start install_deps clean new_day remove_day all_tests test format check_format all_tests_pipeline check_format_pipeline
