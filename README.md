@@ -44,7 +44,7 @@ make format
 
 And check if others pass prettier in their code.
 ```bash
-make check-format
+make check_format
 ```
 
 There are git hooks with those two command in the commit and push actions.
