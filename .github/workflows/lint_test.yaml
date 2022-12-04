@@ -21,8 +21,8 @@ jobs:
       - name: ✅ Check Format
         run: make check-format
 
-  tests:
-    - runs-on: ubuntu-latest
-    - steps:
+  test:
+    runs-on: ubuntu-latest
+    steps:
       - name: 🔧 Execute tests
         run: make all_tests
