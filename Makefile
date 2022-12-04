@@ -38,4 +38,10 @@ format: ## format code
 check-format: ## check format code
 	@./mvnw prettier:check
 
+all-tests-pipeline: ## execute all tests
+	@./mvnw test
+
+check-format-pipeline: ## check format code
+	@mvn prettier:check
+
 .PHONY: help start install-deps clean new_day
