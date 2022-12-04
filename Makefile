@@ -39,7 +39,7 @@ check-format: ## check format code
 	@./mvnw prettier:check
 
 all-tests-pipeline: ## execute all tests
-	@./mvnw test
+	@mvn test
 
 check-format-pipeline: ## check format code
 	@mvn prettier:check
