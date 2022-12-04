@@ -11,12 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'zulu'
-          java-version: '19'
-          cache: maven
+#      - name: Set up JDK 11
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'zulu'
+#          java-version: '19'
+#          cache: maven
+      - name: Maven Install
+        run: make install-deps
 
       - name: ✅ Check Format
         run: make check-format
